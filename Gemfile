@@ -5,7 +5,7 @@ ruby '2.5.1'
 
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap'
 gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
