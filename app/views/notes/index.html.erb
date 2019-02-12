@@ -1,0 +1,15 @@
+<div class="noteCollection">
+  <% @notes.each do |note| %>
+    <div class="card stickynote">
+      <div class="card-body">
+        <%= link_to note_path(note) do %>
+          <h5 class="card-title">#<%= note.category %> - <%= note.title %></h5>
+        <% end %>
+        <h6 class="card-subtitle mb-2 text-muted">Author: <%= note.author %></h6>
+        <p class="card-text"> <%= note.content.truncate(100) %></p>
+        <%= link_to 'Edit', edit_note_path(note), class: "card-link" %>
+        <%= link_to 'Destroy', note_path(note), method: :delete, data: { confirm: 'Are you sure?'}, class: "card-link" %>
+      </div>
+    </div>
+  <% end %>
+</div>
